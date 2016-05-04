@@ -64,6 +64,7 @@ while True:
         player_dict['Scrimmage Average'] = input("How many yards from scrimmage did the player average? ")
         player_dict['Scrimmage Touchdowns'] = input("How many touchdowns did the player score from scrimmage plays? ")
         insert_player(player_dict)
+        conn.commit()
     elif user_choice == '':
         break
     else:
