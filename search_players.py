@@ -28,9 +28,6 @@ def insert_player(player_dict):
 conn = psycopg2.connect("dbname=exercise user=gregiskhan host=/tmp/")
 cur = conn.cursor()
 
-
-cur.execute('SELECT player FROM rushing_receiving;')
-players = cur.fetchall()
 while True:
     cur.execute('SELECT player FROM rushing_receiving;')
     players = cur.fetchall()
