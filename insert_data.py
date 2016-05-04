@@ -37,7 +37,7 @@ def insert_data():
 conn = psycopg2.connect("dbname=exercise user=gregiskhan host=/tmp/")
 cur = conn.cursor()
 
-cur.execute("select exists(select * from information_schema.tables where table_name=%s)", ('2015_carolina_football',))
+cur.execute("select exists(select * from information_schema.tables where table_name=%s)", ('rushing_receiving',))
 if cur.fetchone()[0]:
     insert_data()
 else:
